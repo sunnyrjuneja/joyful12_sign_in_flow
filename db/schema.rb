@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429235151) do
+ActiveRecord::Schema.define(version: 20150430010259) do
+
+  create_table "gifts", force: :cascade do |t|
+    t.string   "your_name"
+    t.string   "your_email"
+    t.string   "promo_code"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "message"
+    t.string   "credit_card_number"
+    t.string   "cvv"
+    t.string   "billing_address"
+    t.string   "zip"
+    t.string   "state"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
