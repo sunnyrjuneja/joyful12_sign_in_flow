@@ -1,14 +1,15 @@
 <div class='container'>
+  <h1>Joyfoodly Sign up flows</h1>
   <% if user_signed_in? %>
     <li>
-      <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %>
+      <h2><%= link_to('Sign out', destroy_user_session_path, :method => :delete) %></h2>
     </li>
   <% else %>
     <li>
-      <%= link_to('Sign in', new_user_session_path)  %>
+      <h2><%= link_to('Sign in flow', new_user_session_path)  %></h2>
     </li>
     <li>
-      <%= link_to('Sign up', new_user_registration_path)  %>
+      <h2><%= link_to('Sign up flow', new_user_registration_path)  %></h2>
     </li>
   <% end %>
 </div>
